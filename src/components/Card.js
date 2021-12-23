@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-// import EditTask from '../modals/EditTask'
+import EditTask from '../modals/EditTask'
 
 const Card = ({taskObj, index, deleteTask, updateListArray}) => {
     const [modal, setModal] = useState(false);
@@ -51,7 +51,7 @@ const Card = ({taskObj, index, deleteTask, updateListArray}) => {
                     <i class="fas fa-trash-alt" style = {{"color" : colors[index%5].primaryColor, "cursor" : "pointer"}} onClick = {handleDelete}></i>
                 </div>
         </div>
-        {/* <EditTask modal = {modal} toggle = {toggle} updateTask = {updateTask} taskObj = {taskObj}/>  */}
+        <EditTask modal = {modal} toggle = {toggle} updateTask = {updateTask} taskObj = {taskObj}/> 
         </div>
     );
 };
